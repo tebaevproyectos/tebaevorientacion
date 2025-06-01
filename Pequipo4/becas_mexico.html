@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Becas en México</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fbfcfc;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            color: #000000;
+        }
+
+        header {
+            background: linear-gradient(to right, #cb4335, #7f8c8d);
+            color: #ffffff;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; transform: translateY(0); }
+            from { opacity: 0; transform: translateY(-20px); }
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate {
+            opacity: 0;
+            animation: slideUp 1s ease-out forwards;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px 20px;
+        }
+
+        section {
+            background-color: #ffffff;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 100%;
+            border: 3px solid #7f8c8d;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        section:hover {
+            transform: scale(1.02);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        h2 {
+            color: #cb4335;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+            font-size: 1.05rem;
+        }
+
+        li::before {
+            content: '✔';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #cb4335;
+            font-weight: bold;
+        }
+
+        a {
+            text-decoration: none;
+            color: #cb4335;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #7f8c8d;
+        }
+
+        img {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-top: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .contacto {
+            background-color: #ffffff;
+            border: 2px solid #7f8c8d;
+            border-radius: 15px;
+            padding: 20px;
+            max-width: 800px;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .contacto h3 {
+            color: #cb4335;
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+        }
+
+        .contacto p {
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
+        .contacto strong {
+            color: #000000;
+        }
+
+        .gif-mascota {
+            position: fixed;
+            bottom: 15px;
+            right: 15px;
+            z-index: 1000;
+            width: 130px;
+            height: auto;
+            cursor: pointer;
+        }
+
+        #globo-dato {
+            position: fixed;
+            bottom: 150px;
+            right: 15px;
+            max-width: 280px;
+            background: #cb4335;
+            color: white;
+            padding: 12px 18px;
+            border-radius: 10px;
+            font-size: 14px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+            display: none;
+            z-index: 2000;
+        }
+
+        @media (max-width: 600px) {
+            #globo-dato {
+                bottom: 130px;
+                right: 10px;
+                max-width: 90vw;
+                font-size: 13px;
+            }
+        }
+    </style>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const secciones = document.querySelectorAll('main section');
+            secciones.forEach((sec, i) => {
+                setTimeout(() => {
+                    sec.classList.add('animate');
+                }, i * 200);
+            });
+
+            const gato = document.getElementById('gato-animado');
+            const globo = document.getElementById('globo-dato');
+
+            gato.addEventListener('click', () => {
+                globo.style.display = globo.style.display === 'block' ? 'none' : 'block';
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!gato.contains(e.target) && !globo.contains(e.target)) {
+                    globo.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Becas en México</h1>
+    </header>
+    <main>
+        <section id="introduccion">
+            <h2>¿Qué son las becas?</h2>
+            <p>Las becas son ayudas económicas que se otorgan a estudiantes para apoyar su educación y desarrollo académico.</p>
+            <img src="img/becas-mexico.jpg" alt="Becas en México">
+        </section>
+        <section id="tipos-de-becas">
+            <h2>Tipos de becas en México</h2>
+            <ul>
+                <li><a href="beca-bienestar.html">Becas del Bienestar</a>: Para estudiantes de educación básica, media superior y superior en México.</li>
+                <li><a href="beca-conacyt.html">Becas CONACYT</a>: Para estudiantes de posgrado y investigación en México.</li>
+                <li><a href="beca-pronabes.html">Becas PRONABES</a>: Para estudiantes de licenciatura y posgrado en México.</li>
+                <li><a href="beca-sep.html">Becas SEP</a>: Para estudiantes de educación básica, media superior y superior en México.</li>
+                <li><a href="beca-santander.html">Becas Santander</a>: Para estudiantes de licenciatura y posgrado en México, con el objetivo de apoyar su desarrollo académico y profesional.</li>
+                <li><a href="beca-fumec.html">Becas de la Fundación México-Estados Unidos para la Ciencia (FUMEC)</a>: Para estudiantes de posgrado y investigación en México.</li>
+            </ul>
+        </section>
+        <section class="contacto">
+            <h3>¿Tienes alguna duda o comentario?</h3>
+            <p>Puedes <strong>contactarnos</strong> o <strong>seguirnos</strong> en nuestras redes sociales como:</p>
+            <p>
+                WhatsApp: <strong>+52 282 103 02 35</strong><br>
+                Instagram: <strong>@brandon._joji</strong><br>
+                Facebook: <strong>Brandon AV</strong>
+            </p>
+        </section>
+    </main>
+
+    <!-- Mascota -->
+    <img src="img/gato-animado.gif" alt="Gato animado" class="gif-mascota" id="gato-animado">
+
+    <!-- Globo de dato curioso -->
+    <div id="globo-dato">
+        ¿Sabías que en México existen más de 100 tipos de becas públicas y privadas para estudiantes?
+    </div>
+</body>
+</html>

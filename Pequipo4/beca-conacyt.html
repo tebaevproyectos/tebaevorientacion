@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Becas CONACYT</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #fbfcfc;
+            color: #000000;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        header {
+            background: #cb4335;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+        }
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #000000;
+            margin-bottom: 10px;
+            border-left: 4px solid #cb4335;
+            padding-left: 10px;
+        }
+        ul, ol {
+            margin-left: 20px;
+            padding-left: 10px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .enlace-oficial a {
+            display: inline-block;
+            margin-top: 10px;
+            background: #cb4335;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background 0.3s ease;
+        }
+        .enlace-oficial a:hover {
+            background: #7f8c8d; /* gris */
+            color: white;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #777;
+        }
+        .gif-mascota {
+            position: fixed;
+            bottom: 15px;
+            right: 15px;
+            z-index: 1000;
+            width: 120px;
+            height: auto;
+            cursor: pointer;
+        }
+        #globo-dato {
+            position: fixed;
+            bottom: 150px;
+            right: 15px;
+            max-width: 280px;
+            background: #cb4335;
+            color: white;
+            padding: 12px 18px;
+            border-radius: 10px;
+            font-size: 14px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+            display: none;
+            z-index: 2000;
+            font-family: Arial, sans-serif;
+        }
+        @media (max-width: 600px) {
+            main {
+                padding: 20px;
+                margin: 10px;
+            }
+            #globo-dato {
+                bottom: 130px;
+                right: 10px;
+                max-width: 90vw;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Becas CONACYT</h1>
+    </header>
+    <main>
+        <section>
+            <h2>¿Qué es la Beca CONACYT?</h2>
+            <p>La Beca CONACYT otorga apoyo económico a estudiantes de posgrado y personas dedicadas a la investigación científica y tecnológica en México.</p>
+        </section>
+        <section>
+            <h2>Requisitos</h2>
+            <ul>
+                <li>Ser estudiante de posgrado o investigador en México</li>
+                <li>Promedio mínimo de 8.0</li>
+                <li>Estar inscrito en un programa reconocido por CONACYT</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Proceso de solicitud</h2>
+            <ol>
+                <li>Ingresar al portal del CONACYT</li>
+                <li>Crear una cuenta en el Sistema de Becas</li>
+                <li>Subir la documentación requerida</li>
+                <li>Esperar confirmación del proceso</li>
+            </ol>
+        </section>
+        <section class="enlace-oficial">
+            <h2>Enlace oficial</h2>
+            <p>Para más información, visita:</p>
+            <a href="https://conacyt.mx" target="_blank" rel="noopener noreferrer">conacyt.mx</a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Becas en México</p>
+    </footer>
+
+    <!-- Imagen interactiva de la mascota -->
+    <img src="img/gato-conacyt.gif" alt="Mascota CONACYT" class="gif-mascota" id="gato-conacyt">
+
+    <!-- Globo de texto con dato curioso -->
+    <div id="globo-dato">
+        ¿Sabías que CONACYT apoya a más de 50,000 estudiantes de posgrado en México cada año?
+    </div>
+
+    <script>
+        const gato = document.getElementById('gato-conacyt');
+        const globo = document.getElementById('globo-dato');
+
+        gato.addEventListener('click', () => {
+            if (globo.style.display === 'none' || globo.style.display === '') {
+                globo.style.display = 'block';
+            } else {
+                globo.style.display = 'none';
+            }
+        });
+
+        // Ocultar el globo si se hace clic fuera de la imagen o del globo
+        document.addEventListener('click', (event) => {
+            if (!gato.contains(event.target) && !globo.contains(event.target)) {
+                globo.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
+        

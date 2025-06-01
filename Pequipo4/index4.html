@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Becas México</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fbfcfc;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .logo-container {
+            opacity: 0;
+            transform: translateY(-40px);
+            animation: slideDown 1.2s ease-out forwards;
+        }
+
+        .logo-container img {
+            width: 180px;
+            border-radius: 16px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #000000;
+            text-align: center;
+            margin-top: 20px;
+            letter-spacing: 1.5px;
+            font-weight: bold;
+            opacity: 0;
+            animation: fadeInText 1.5s 1s forwards;
+        }
+
+        .link-container {
+            margin-top: 40px;
+            opacity: 0;
+            animation: fadeInLink 1.2s 2.5s forwards;
+        }
+
+        .link-container a {
+            background-color: #cb4335;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 28px;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+            transition: background-color 0.3s ease;
+        }
+
+        .link-container a:hover {
+            background-color: #7f8c8d;
+        }
+
+        @keyframes slideDown {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInText {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInLink {
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <img src="img/beca-inicio.jpg" alt="Logo Becas México">
+    </div>
+    <h1>Becas México</h1>
+    <div class="link-container">
+        <a href="becas_mexico.html">Entrar a la página principal</a>
+    </div>
+</body>
+</html>

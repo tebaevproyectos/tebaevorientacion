@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Becas del Bienestar</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #fbfcfc;
+            color: #000000;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        header {
+            background: #cb4335;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            border-radius: 10px;
+        }
+        header h1 {
+            font-size: 2em;
+        }
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #000000;
+            margin-bottom: 10px;
+            border-left: 4px solid #cb4335;
+            padding-left: 10px;
+        }
+        ul, ol {
+            margin-left: 20px;
+            padding-left: 10px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .enlace-oficial a {
+            display: inline-block;
+            margin-top: 10px;
+            background: #cb4335;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background 0.3s ease;
+        }
+        .enlace-oficial a:hover {
+            background: #7f8c8d;
+            color: white;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #777;
+        }
+        .gif-mascota {
+            position: fixed;
+            bottom: 15px;
+            right: 15px;
+            z-index: 1000;
+            width: 120px;
+            height: auto;
+            cursor: pointer;
+        }
+        #globo-dato {
+            position: fixed;
+            bottom: 150px;
+            right: 15px;
+            max-width: 280px;
+            background: #cb4335;
+            color: white;
+            padding: 12px 18px;
+            border-radius: 10px;
+            font-size: 14px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+            display: none;
+            z-index: 2000;
+            font-family: Arial, sans-serif;
+        }
+        @media (max-width: 600px) {
+            main {
+                padding: 20px;
+                margin: 10px;
+            }
+            #globo-dato {
+                bottom: 130px;
+                right: 10px;
+                max-width: 90vw;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Becas del Bienestar</h1>
+    </header>
+    <main>
+        <section>
+            <h2>¿Qué es la Beca del Bienestar?</h2>
+            <p>La Beca del Bienestar es un programa de becas que otorga apoyo económico a estudiantes de educación básica, media superior y superior en México.</p>
+        </section>
+        <section>
+            <h2>Requisitos</h2>
+            <ul>
+                <li>Ser estudiante de educación básica, media superior o superior en México</li>
+                <li>Tener un promedio mínimo de 7.0</li>
+                <li>No tener ingresos familiares superiores a cierta cantidad</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Proceso de solicitud</h2>
+            <ol>
+                <li>Registrarse en el sitio web del programa</li>
+                <li>Llenar el formulario de solicitud</li>
+                <li>Adjuntar los documentos requeridos</li>
+                <li>Enviar la solicitud</li>
+            </ol>
+        </section>
+        <section class="enlace-oficial">
+            <h2>Enlace oficial</h2>
+            <p>Para más información, visita el sitio oficial de las Becas para el Bienestar Benito Juárez:</p>
+            <a href="https://www.becasbenitojuarez.gob.mx/" target="_blank" rel="noopener noreferrer">www.becasbenitojuarez.gob.mx</a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Becas en México</p>
+    </footer>
+
+    <!-- Imagen interactiva de la mascota -->
+    <img src="img/gato-bienestar.gif" alt="Mascota Bienestar" class="gif-mascota" id="gato-bienestar">
+
+    <!-- Globo de texto con dato curioso -->
+    <div id="globo-dato">
+        ¿Sabías que las Becas del Bienestar apoyan a millones de estudiantes para combatir la deserción escolar?
+    </div>
+
+    <script>
+        const gato = document.getElementById('gato-bienestar');
+        const globo = document.getElementById('globo-dato');
+
+        gato.addEventListener('click', () => {
+            if (globo.style.display === 'none' || globo.style.display === '') {
+                globo.style.display = 'block';
+            } else {
+                globo.style.display = 'none';
+            }
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!gato.contains(event.target) && !globo.contains(event.target)) {
+                globo.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
