@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Exámenes y Consejos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(135deg, #fbfcfc, #7f8c8d);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .contenedor {
+      max-width: 1000px;
+      width: 100%;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    header h1 {
+      font-size: 2.8em;
+      color: #000000;
+    }
+
+    .tarjeta {
+      background-color: #fbfcfc;
+      border-left: 8px solid #3b82f6;
+      padding: 25px 30px;
+      border-radius: 15px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .tarjeta:nth-child(2) {
+      border-left-color: #cb4335; /* nuevo color para la tarjeta informativa */
+    }
+
+    .tarjeta:nth-child(3) {
+      border-left-color: #cb4335;
+    }
+
+    .tarjeta:nth-child(4) {
+      border-left-color: #cb4335;
+    }
+
+    .tarjeta:nth-child(5) {
+      border-left-color: #cb4335;
+    }
+
+    .tarjeta:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    h2 {
+      color: #111827;
+      margin-bottom: 15px;
+      font-size: 1.6em;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li {
+      margin-bottom: 12px;
+      color: #374151;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    li::before {
+      content: "✓";
+      color: #10b981;
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+
+    p {
+      color: #374151;
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #000000;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      color: #1e40af;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2em;
+      }
+
+      h2 {
+        font-size: 1.3em;
+      }
+
+      .tarjeta {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="contenedor">
+    <header>
+      <h1>Exámenes y Consejos</h1>
+    </header>
+
+    <!-- Nueva tarjeta informativa -->
+    <div class="tarjeta">
+      <h2>¿De qué trata esta página?</h2>
+      <p>Esta página está diseñada para ayudarte a prepararte mejor para tus exámenes de admisión y a descubrir tus intereses vocacionales mediante herramientas prácticas como test en línea y recursos descargables.</p>
+      <p><strong>¿Por qué hacer un test vocacional?</strong> Los test vocacionales te ayudan a identificar tus áreas de interés, talentos y posibles carreras que se ajusten a tu perfil. Son una guía útil para tomar decisiones más informadas sobre tu futuro académico.</p>
+      <p><strong>Consejos generales para tu examen de admisión:</strong></p>
+      <ul>
+        <li>Empieza a estudiar con anticipación.</li>
+        <li>Enfócate en las áreas más importantes del examen.</li>
+        <li>No olvides practicar con simulacros reales.</li>
+        <li>Confía en ti mismo y mantén una actitud positiva.</li>
+      </ul>
+    </div>
+
+    <div class="tarjeta">
+      <h2>Tipos de exámenes</h2>
+      <ul>
+        <li><a href="examen-en-linea.html">Test de intereses vocacional</a></li>
+        <li><a href="examen-de-pdf.html">Examen en PDF</a></li>
+      </ul>
+    </div>
+
+    <div class="tarjeta">
+      <h2>Cómo prepararse para un examen</h2>
+      <ul>
+        <li>Establece un plan de estudio y organiza tu tiempo de manera efectiva.</li>
+        <li>Revisa y comprueba tus conocimientos previos.</li>
+        <li>Práctica con ejercicios y preguntas similares a las del examen.</li>
+        <li>Duerme lo suficiente y come bien para mantener tu cerebro en buen estado.</li>
+      </ul>
+    </div>
+
+    <div class="tarjeta">
+      <h2>Consejos para aprobar un examen</h2>
+      <ul>
+        <li>Lee cuidadosamente las preguntas y entiende lo que se te pide.</li>
+        <li>Gestiona tu tiempo de manera efectiva y no te quedes atascado en una sola pregunta.</li>
+        <li>Revisa tus respuestas antes de entregar el examen.</li>
+        <li>Mantén la calma y confía en tus habilidades.</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
