@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ranking de Universidades en Veracruz</title>
+  <link href="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --primary: #b91c1c;
+      --secondary: #991b1b;
+      --accent: #f3f4f6;
+      --white: #111827;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --border: #d1d5db;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      padding: 40px;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.6rem;
+      text-align: center;
+      color: var(--primary);
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      margin: 40px 0 20px;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-left: 5px solid var(--primary);
+      padding-left: 12px;
+      animation: slideIn 0.6s ease-out;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: var(--accent);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      animation: fadeUp 0.8s ease;
+    }
+
+    th {
+      background-color: var(--secondary);
+      color: white;
+      padding: 14px;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    td {
+      padding: 14px;
+      text-align: center;
+      color: var(--text);
+      background-color: white;
+      border-bottom: 1px solid var(--border);
+    }
+
+    tr:nth-child(even) td {
+      background-color: #f9fafb;
+    }
+
+    .icon {
+      color: var(--primary);
+      width: 1.4em;
+      height: 1.4em;
+    }
+
+    @keyframes slideIn {
+      from { transform: translateX(-30px); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+
+    @keyframes fadeUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 2rem;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      h2 {
+        font-size: 1.4rem;
+      }
+
+      table, th, td {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1><i class="icon" data-lucide="school"></i> Ranking de Universidades en Veracruz</h1>
+
+  <h2><i class="icon" data-lucide="building-2"></i> Universidades Públicas</h2>
+  <table>
+    <tr>
+      <th>Posición</th>
+      <th>Universidad</th>
+      <th>Posición Nacional</th>
+      <th>Áreas Destacadas</th>
+    </tr>
+    <tr><td>1</td><td>Universidad Veracruzana (UV)</td><td>#6 (4ICU), #10 (Webometrics)</td><td>Medicina, Negocios, Arquitectura</td></tr>
+    <tr><td>2</td><td>Instituto Tecnológico de Veracruz (ITVER)</td><td>#113</td><td>Ingenierías, Ciencias Aplicadas</td></tr>
+    <tr><td>3</td><td>Instituto Tecnológico de Minatitlán (ITMINA)</td><td>#179</td><td>Ingenierías, Administración</td></tr>
+    <tr><td>4</td><td>Instituto Tecnológico de Orizaba (ITOR)</td><td>#251</td><td>Ingenierías</td></tr>
+    <tr><td>5</td><td>Instituto Tecnológico de Poza Rica</td><td>#130</td><td>Ingenierías</td></tr>
+    <tr><td>6</td><td>Instituto Tecnológico de Cerro Azul</td><td>#381</td><td>Ingenierías</td></tr>
+    <tr><td>7</td><td>Universidad Tecnológica del Centro de Veracruz</td><td>#128</td><td>Ingenierías</td></tr>
+    <tr><td>8</td><td>Benemérita Escuela Normal Veracruzana Enrique C. Rébsamen</td><td>#462</td><td>Educación</td></tr>
+  </table>
+
+  <h2><i class="icon" data-lucide="graduation-cap"></i> Universidades Privadas</h2>
+  <table>
+    <tr>
+      <th>Posición</th>
+      <th>Universidad</th>
+      <th>Posición Nacional</th>
+      <th>Áreas de Estudio</th>
+    </tr>
+    <tr><td>1</td><td>Universidad Cristóbal Colón (UCC)</td><td>#155</td><td>Derecho, Administración, Arquitectura, Ingeniería, Salud, Humanidades</td></tr>
+    <tr><td>2</td><td>Universidad Anáhuac Xalapa</td><td>N/A</td><td>Administración, Derecho, Psicoterapia</td></tr>
+    <tr><td>3</td><td>Universidad del Golfo de México (UGM)</td><td>#345</td><td>Medicina, Odontología, Enfermería, Nutrición</td></tr>
+    <tr><td>4</td><td>Universidad Autónoma de Veracruz Villa Rica</td><td>#229</td><td>Diversas licenciaturas</td></tr>
+    <tr><td>5</td><td>Universidad de Oriente (UNO)</td><td>N/A</td><td>Ciencias de la Salud, Ingeniería, Ciencias Sociales</td></tr>
+    <tr><td>6</td><td>Centro de Estudios del Atlántico (CEA)</td><td>N/A</td><td>Ciencias Administrativas, Ciencias Sociales</td></tr>
+    <tr><td>7</td><td>Centro de Estudios Gestalt</td><td>N/A</td><td>Diseño, Comunicación, Marketing</td></tr>
+    <tr><td>8</td><td>Centro de Estudios Universitarios Latinoamericano (CEUL)</td><td>N/A</td><td>Diversas licenciaturas</td></tr>
+  </table>
+
+  <footer>
+    &copy; 2025 - Ranking Educativo Veracruzano | Diseñado con pasión por el conocimiento
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Guía para Elegir Universidad</title>
+  <link href="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f4f4f5;
+      --primary: #991b1b;
+      --secondary: #4b5563;
+      --text: #1f2937;
+      --white: #ffffff;
+      --accent: #d1d5db;
+      --gold: #f59e0b;
+      --red-light: #fecaca;
+      --gray-dark: #111827;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background: linear-gradient(180deg, var(--bg), #e5e7eb);
+      color: var(--text);
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--gray-dark));
+      color: var(--white);
+      text-align: center;
+      padding: 60px 20px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+      animation: fadeSlide 1s ease;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 40px;
+      background: var(--white);
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    h2 {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.8rem;
+      margin-top: 40px;
+      color: var(--primary);
+      border-left: 5px solid var(--secondary);
+      padding-left: 14px;
+      animation: slideRight 0.8s ease;
+    }
+
+    .card {
+      background: var(--red-light);
+      border-left: 5px solid var(--primary);
+      padding: 20px 25px;
+      border-radius: 14px;
+      margin: 18px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeSlideUp 0.6s ease-in-out;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .icon {
+      color: var(--secondary);
+      flex-shrink: 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 25px;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+      animation: fadeIn 1s ease-in;
+    }
+
+    th {
+      background: linear-gradient(90deg, var(--gray-dark), var(--primary));
+      color: var(--white);
+      padding: 14px;
+    }
+
+    td {
+      padding: 14px;
+      text-align: center;
+      background: #f9fafb;
+      border-bottom: 1px solid var(--accent);
+    }
+
+    tr:nth-child(even) td {
+      background: #f3f4f6;
+    }
+
+    .conceptual-box {
+      background: linear-gradient(135deg, var(--secondary), var(--primary));
+      color: var(--white);
+      border-radius: 16px;
+      padding: 30px 30px 35px;
+      margin-top: 45px;
+      animation: fadeSlideUp 0.8s ease;
+    }
+
+    .conceptual-box h3 {
+      margin-top: 0;
+      font-size: 1.6rem;
+    }
+
+    .conceptual-box ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .conceptual-box li::before {
+      content: '✔';
+      color: var(--gold);
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 0.9em;
+      color: #6b7280;
+      margin-top: 60px;
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.98); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes fadeSlide {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeSlideUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideRight {
+      from { opacity: 0; transform: translateX(-40px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        margin: 20px;
+        padding: 25px;
+      }
+
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      h2 {
+        font-size: 1.4rem;
+      }
+
+      .card {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Guía para Elegir Universidad</h1>
+  <p>Explora lo que más importa antes de tomar tu decisión</p>
+</header>
+
+<div class="container">
+
+  <h2><i class="icon" data-lucide="compass"></i>Aspectos Clave a Considerar</h2>
+
+  <div class="card">
+    <i class="icon" data-lucide="heart-pulse"></i>
+    <div><strong>1. Intereses personales:</strong> Elige una carrera que te apasione. No te dejes llevar solo por la moda o la presión.</div>
+  </div>
+
+  <div class="card">
+    <i class="icon" data-lucide="library-big"></i>
+    <div><strong>2. Calidad académica:</strong> Revisa rankings, acreditaciones y trayectoria docente.</div>
+  </div>
+
+  <div class="card">
+    <i class="icon" data-lucide="wallet-cards"></i>
+    <div><strong>3. Costo total:</strong> Considera matrícula, transporte, libros, alojamiento y becas disponibles.</div>
+  </div>
+
+  <div class="card">
+    <i class="icon" data-lucide="globe"></i>
+    <div><strong>4. Ubicación geográfica:</strong> Decide si prefieres quedarte en tu ciudad o explorar otra región o país.</div>
+  </div>
+
+  <div class="card">
+    <i class="icon" data-lucide="users-round"></i>
+    <div><strong>5. Vida universitaria:</strong> Actividades extracurriculares, bienestar emocional, clubs y comunidad.</div>
+  </div>
+
+  <div class="card">
+    <i class="icon" data-lucide="briefcase-business"></i>
+    <div><strong>6. Bolsa de trabajo:</strong> Convenios con empresas, prácticas profesionales y empleabilidad.</div>
+  </div>
+
+  <div class="card">
+    <i class="icon" data-lucide="message-square-more"></i>
+    <div><strong>7. Opiniones reales:</strong> Consulta con estudiantes actuales o egresados para conocer su experiencia.</div>
+  </div>
+
+  <h2><i class="icon" data-lucide="bar-chart-horizontal"></i>Comparativa de Universidades</h2>
+  <table>
+    <tr>
+      <th>Criterio</th>
+      <th>Universidad Alfa</th>
+      <th>Universidad Beta</th>
+      <th>Universidad Gamma</th>
+    </tr>
+    <tr>
+      <td>Ranking Nacional</td>
+      <td>Top 3</td>
+      <td>Top 15</td>
+      <td>Top 10</td>
+    </tr>
+    <tr>
+      <td>Costo Anual</td>
+      <td>$45,000</td>
+      <td>$28,000</td>
+      <td>$35,000</td>
+    </tr>
+    <tr>
+      <td>Oferta de Becas</td>
+      <td>Alta</td>
+      <td>Media</td>
+      <td>Alta</td>
+    </tr>
+    <tr>
+      <td>Infraestructura</td>
+      <td>Excelente</td>
+      <td>Buena</td>
+      <td>Muy buena</td>
+    </tr>
+    <tr>
+      <td>Convenios Internacionales</td>
+      <td>Sí</td>
+      <td>No</td>
+      <td>Sí</td>
+    </tr>
+  </table>
+
+  <h2><i class="icon" data-lucide="layers-3"></i>Cuadro Conceptual</h2>
+  <div class="conceptual-box">
+    <h3>Factores para Elegir Universidad</h3>
+    <ul>
+      <li><strong>Académicos:</strong> Calidad, programas, acreditaciones</li>
+      <li><strong>Financieros:</strong> Costos, becas, apoyo económico</li>
+      <li><strong>Personales:</strong> Intereses, estilo de vida, ubicación</li>
+      <li><strong>Profesionales:</strong> Inserción laboral, prácticas, convenios</li>
+      <li><strong>Sociales:</strong> Comunidad, clubs, actividades culturales</li>
+    </ul>
+  </div>
+
+</div>
+
+<footer>
+  &copy; 2025 - Guía Universitaria | Diseñado para inspirarte a elegir con inteligencia
+</footer>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  lucide.createIcons();
+</script>
+
+</body>
+</html>

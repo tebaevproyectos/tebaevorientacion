@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Consejos para Elegir una Universidad Privada</title>
+  <link href="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f8f9fa;
+      --primary: #8b0000; /* rojo oscuro */
+      --accent: #b91c1c; /* rojo brillante */
+      --text: #2e2e2e;   /* gris oscuro */
+      --white: #ffffff;
+      --gray: #4b5563;   /* gris medio */
+    }
+
+    body {
+      font-family: 'Merriweather', serif;
+      margin: 0;
+      background-color: var(--bg);
+      color: var(--text);
+      animation: fadeIn 1.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: var(--white);
+      padding: 40px 20px;
+      text-align: center;
+      animation: fadeIn 1.5s ease;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: var(--white);
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      animation: slideUp 1s ease forwards;
+    }
+
+    h2 {
+      margin-top: 30px;
+      color: var(--primary);
+      font-size: 1.6rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    ul {
+      margin-top: 15px;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 12px;
+      transition: all 0.3s ease;
+    }
+
+    li:hover {
+      color: var(--accent);
+      transform: translateX(5px);
+    }
+
+    .icon {
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+      animation: fadeIn 1s ease forwards;
+    }
+
+    th {
+      background-color: var(--accent);
+      color: var(--white);
+      padding: 14px;
+      text-align: center;
+    }
+
+    td {
+      background-color: #fef2f2;
+      padding: 12px;
+      text-align: center;
+      border-bottom: 1px solid #f3dcdc;
+    }
+
+    tr:nth-child(even) td {
+      background-color: #fdf4f4;
+    }
+
+    .faq {
+      margin-top: 40px;
+      background-color: #fff5f5;
+      padding: 25px;
+      border-left: 5px solid var(--accent);
+      border-radius: 12px;
+      animation: slideUp 1s ease;
+    }
+
+    .faq h3 {
+      margin-top: 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: var(--gray);
+      font-size: 0.9rem;
+      margin-top: 50px;
+      animation: fadeIn 1.5s ease;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Consejos para Elegir una Universidad Privada</h1>
+  <p>Toma una decisión informada sobre tu futuro profesional</p>
+</header>
+
+<div class="container">
+
+  <h2><i class="icon" data-lucide="lightbulb"></i>Consejos Clave</h2>
+  <ul>
+    <li><strong>Acreditación:</strong> Verifica que esté reconocida por la SEP y organismos oficiales como COPAES o CIEES.</li>
+    <li><strong>Oferta académica:</strong> Asegúrate de que la carrera esté actualizada, con enfoque práctico y materias relevantes.</li>
+    <li><strong>Costo y becas:</strong> Investiga costos reales por semestre, opciones de becas académicas, deportivas o sociales.</li>
+    <li><strong>Instalaciones:</strong> Laboratorios, biblioteca, aulas tecnológicas, áreas deportivas, cafeterías, etc.</li>
+    <li><strong>Empleabilidad:</strong> ¿Tienen bolsa de trabajo, prácticas profesionales o convenios empresariales?</li>
+    <li><strong>Opinión de estudiantes:</strong> Busca reseñas, foros o habla directamente con egresados.</li>
+    <li><strong>Ubicación:</strong> Evalúa si puedes vivir cerca o si requiere mudanza y sus costos.</li>
+    <li><strong>Reconocimiento:</strong> ¿Es conocida en tu área profesional? ¿Tiene prestigio nacional o internacional?</li>
+  </ul>
+
+  <h2><i class="icon" data-lucide="layers"></i>Comparativa de Universidades Privadas</h2>
+  <table>
+    <tr>
+      <th>Universidad</th>
+      <th>Acreditación</th>
+      <th>Costo Semestral</th>
+      <th>Oferta de Becas</th>
+      <th>Bolsa de Trabajo</th>
+    </tr>
+    <tr>
+      <td>Universidad A</td>
+      <td>SEP, FIMPES</td>
+      <td>$42,000</td>
+      <td>Hasta 70%</td>
+      <td>Sí</td>
+    </tr>
+    <tr>
+      <td>Universidad B</td>
+      <td>SEP</td>
+      <td>$28,000</td>
+      <td>Hasta 50%</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>Universidad C</td>
+      <td>SEP, CIEES</td>
+      <td>$35,000</td>
+      <td>Hasta 60%</td>
+      <td>Sí</td>
+    </tr>
+  </table>
+
+  <div class="faq">
+    <h3>¿Qué preguntas deberías hacer antes de elegir?</h3>
+    <ul>
+      <li>¿Mi carrera está bien posicionada en esta universidad?</li>
+      <li>¿Qué porcentaje de egresados consigue empleo en menos de 6 meses?</li>
+      <li>¿Cómo es el ambiente estudiantil?</li>
+      <li>¿Tienen intercambios internacionales?</li>
+      <li>¿Puedo obtener una beca en función de mi promedio o situación económica?</li>
+    </ul>
+  </div>
+
+</div>
+
+<footer>
+  &copy; 2025 - Guía de Universidades Privadas. Información basada en fuentes educativas y opiniones estudiantiles.
+</footer>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  lucide.createIcons();
+</script>
+
+</body>
+</html>

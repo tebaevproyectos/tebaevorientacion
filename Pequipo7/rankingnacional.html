@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ranking Nacional de Universidades en México 2025</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fffaf9;
+      --primary: #b22222;
+      --secondary: #d93030;
+      --accent: #fdf2f2;
+      --white: #1a1a1a;
+      --text: #333333;
+      --border: #e0e0e0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Merriweather', serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 40px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      color: var(--primary);
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin: 40px 0 20px;
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-left: 6px solid var(--primary);
+      padding-left: 12px;
+      animation: slideIn 0.6s ease-out;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 40px;
+      background: var(--accent);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      animation: fadeUp 0.8s ease;
+    }
+
+    th {
+      background: var(--secondary);
+      color: white;
+      padding: 14px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    td {
+      padding: 14px;
+      text-align: center;
+      background-color: #ffffff;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    tr:nth-child(even) td {
+      background-color: #f9f9f9;
+    }
+
+    .icon {
+      color: var(--primary);
+      width: 1.4em;
+      height: 1.4em;
+    }
+
+    @keyframes slideIn {
+      from { transform: translateX(-30px); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+
+    @keyframes fadeUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 2rem;
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      h2 {
+        font-size: 1.4rem;
+      }
+
+      table, th, td {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1><i class="icon" data-lucide="globe"></i> Ranking Nacional de Universidades en México (2025)</h1>
+
+  <h2><i class="icon" data-lucide="university"></i> Universidades Públicas</h2>
+  <table>
+    <tr>
+      <th>Posición</th>
+      <th>Universidad</th>
+      <th>Áreas Destacadas</th>
+    </tr>
+    <tr><td>1</td><td>UNAM</td><td>Investigación, Medicina, Derecho, Ingeniería</td></tr>
+    <tr><td>2</td><td>IPN</td><td>Ingenierías, Ciencia, Tecnología</td></tr>
+    <tr><td>3</td><td>UAM</td><td>Ciencias Sociales, Diseño, Ingeniería</td></tr>
+    <tr><td>4</td><td>BUAP</td><td>Salud, Ciencias, Administración</td></tr>
+    <tr><td>5</td><td>UANL</td><td>Ingeniería, Medicina, Derecho</td></tr>
+    <tr><td>6</td><td>Universidad de Guadalajara (UDG)</td><td>Ciencias de la Salud, Educación</td></tr>
+    <tr><td>7</td><td>UAEM</td><td>Educación, Administración, Derecho</td></tr>
+    <tr><td>8</td><td>UASLP</td><td>Ingeniería, Medicina</td></tr>
+    <tr><td>9</td><td>Universidad Veracruzana (UV)</td><td>Medicina, Negocios, Arquitectura</td></tr>
+    <tr><td>10</td><td>UABC</td><td>Ingenierías, Ciencias Sociales</td></tr>
+  </table>
+
+  <h2><i class="icon" data-lucide="graduation-cap"></i> Universidades Privadas</h2>
+  <table>
+    <tr>
+      <th>Posición</th>
+      <th>Universidad</th>
+      <th>Áreas de Estudio</th>
+    </tr>
+    <tr><td>1</td><td>Tecnológico de Monterrey (ITESM)</td><td>Ingeniería, Negocios, Innovación</td></tr>
+    <tr><td>2</td><td>Universidad Iberoamericana (IBERO)</td><td>Ciencias Sociales, Diseño, Derecho</td></tr>
+    <tr><td>3</td><td>Universidad Panamericana (UP)</td><td>Negocios, Derecho, Ingeniería</td></tr>
+    <tr><td>4</td><td>Universidad Anáhuac</td><td>Psicología, Derecho, Arquitectura</td></tr>
+    <tr><td>5</td><td>Universidad de las Américas Puebla (UDLAP)</td><td>Relaciones Internacionales, Arte, Negocios</td></tr>
+    <tr><td>6</td><td>Universidad La Salle</td><td>Salud, Ingeniería, Educación</td></tr>
+    <tr><td>7</td><td>Universidad del Valle de México (UVM)</td><td>Negocios, Salud, Tecnología</td></tr>
+    <tr><td>8</td><td>Universidad Autónoma de Guadalajara (UAG)</td><td>Medicina, Administración</td></tr>
+    <tr><td>9</td><td>Universidad Intercontinental (UIC)</td><td>Psicología, Comunicación</td></tr>
+    <tr><td>10</td><td>Universidad del Mayab (Anáhuac Mayab)</td><td>Diseño, Derecho, Negocios</td></tr>
+  </table>
+
+  <footer>
+    &copy; 2025 - Ranking Educativo Nacional | Diseñado con orgullo académico
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+
+</body>
+</html>
