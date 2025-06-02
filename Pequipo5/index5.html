@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Equipo 5 - Conoce y Emociónate</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg,white, gray);
+      color: #333;
+    }
+
+    marquee {
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 15px;
+      font-size: 26px;
+      color: #b71c1c;
+      font-weight: bold;
+    }
+
+    table {
+      width: 90%;
+      margin: 40px auto;
+      border-collapse: collapse;
+      background-color: white;
+      border: 2px solid #8b0000;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    th, td {
+      border: 1px solid #8b0000;
+      padding: 20px;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #c62828;
+      color: white;
+      font-size: 20px;
+    }
+
+    th img, td img {
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    td img:hover {
+      transform: scale(1.1);
+    }
+
+    .icon {
+      margin-right: 8px;
+    }
+
+    tr:hover {
+      background-color: #ffe5e5;
+    }
+
+    /* Icono de gato fijo */
+    .cat-icon {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      z-index: 1000;
+    }
+
+    .cat-icon:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+
+<marquee behavior="alternate" direction="right">
+  CARRERAS DE CIENCIAS DE LA SALUD 
+</marquee>
+
+<table>
+  <tr>
+    <th><span class="icon">🏫</span>Escuela</th>
+    <th><span class="icon">📖</span>Descripción</th>
+    <th><span class="icon">🛡️</span>Escudo</th>
+  </tr>
+
+  <tr>
+    <td>UNIVERSIDADES DE VERACRUZ</td>
+    <td>Institución pública en México, destacada por docencia, investigación y difusión cultural.</td>
+    <td><a href="p5.1.html"><img src="vera.png" width="100" height="100" alt="UV"></a></td>
+  </tr>
+
+  <tr>
+    <td>UNIVERSIDADES DE TEZIUTLÁN</td>
+    <td>Comprometida con la enseñanza, investigación y cultura en la región.</td>
+    <td><a href="p2.html"><img src="tezi.png" width="100" height="100" alt="Teziutlán"></a></td>
+  </tr>
+
+  <tr>
+    <td>UNIVERSIDADES DE PEROTE</td>
+    <td>Fomenta el desarrollo académico y cultural regional.</td>
+    <td><a href="p3.html"><img src="perote.png" width="100" height="100" alt="Perote"></a></td>
+  </tr>
+
+  <tr>
+    <td>UNIVERSIDADES DE ORIZABA</td>
+    <td>Impulsa el crecimiento educativo con programas de calidad.</td>
+    <td><a href="pj1.html"><img src="ori.png" width="100" height="100" alt="Orizaba"></a></td>
+  </tr>
+
+  <tr>
+    <td>UNIVERSIDADES DE XALAPA</td>
+    <td>Impulsa el crecimiento educativo con programas de calidad.</td>
+    <td><a href="pcxalapa.html"><img src="xal.png" width="100" height="100" alt="Xalapa"></a></td>
+  </tr>
+</table>
+
+<!-- Ícono de gato -->
+<img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Gato" class="cat-icon" onclick="maullar()">
+
+<!-- Audio de maullido -->
+<audio id="maullido">
+  <source src="https://www.fesliyanstudios.com/play-mp3/6543" type="audio/mpeg">
+  Tu navegador no soporta audio HTML5.
+</audio>
+
+<script>
+  function maullar() {
+    document.getElementById("maullido").play();
+    alert("¿Sabías que las carreras de Ciencias de la Salud como Medicina, Enfermería y Psicología tienen alta demanda laboral y vocación de servicio?");
+  }
+</script>
+
+</body>
+</html>
