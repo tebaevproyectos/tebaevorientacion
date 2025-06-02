@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Universidad de Teziutlán (UNTE) - Carreras</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fbfcfc;
+      color: #000000;
+    }
+    header {
+      background-color: #cb4334;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .carrera {
+      display: flex;
+      flex-wrap: wrap;
+      background-color: white;
+      margin: 20px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(127,140,141,0.3);
+      border: 1px solid #7f8c8d;
+    }
+    .carrera img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      border-right: 4px solid #cb4334;
+    }
+    .carrera-info {
+      flex: 1;
+      padding: 20px;
+    }
+    .carrera-info h2 {
+      margin-top: 0;
+      color: #cb4334;
+    }
+    footer {
+      background-color: #cb4334;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 40px;
+    }
+    @media (max-width: 768px) {
+      .carrera {
+        flex-direction: column;
+        align-items: center;
+      }
+      .carrera img {
+        max-width: 100%;
+        border-right: none;
+        border-bottom: 4px solid #cb4334;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Universidad de Teziutlán (UNTE)</h1>
+    <p>Formando profesionales con ética y compromiso social</p>
+  </header>
+
+  <section class="carrera">
+    <img src="Educacion.webp" alt="Educación Primaria">
+    <div class="carrera-info">
+      <h2>Licenciatura en Educación Primaria</h2>
+      <p>La carrera de Educación Primaria en la UNTE está diseñada para formar docentes capaces de enfrentar los retos de la educación básica con creatividad y compromiso. El programa combina teoría pedagógica con prácticas en aula, preparando a los estudiantes para impactar positivamente en la formación de niños y niñas.</p>
+      <p><strong>Duración:</strong> 8 semestres</p>
+      <p><strong>Perfil de egreso:</strong> Docente con habilidades en planificación educativa, gestión de aula y evaluación del aprendizaje.</p>
+    </div>
+  </section>
+
+  <section class="carrera">
+    <img src="derecho.webp" alt="Licenciatura en Derecho">
+    <div class="carrera-info">
+      <h2>Licenciatura en Derecho</h2>
+      <p>La Licenciatura en Derecho de la UNTE forma profesionales con sólidos conocimientos jurídicos, capaces de analizar y resolver conflictos legales con ética y responsabilidad. El plan de estudios incluye áreas como derecho civil, penal, constitucional y derechos humanos.</p>
+      <p><strong>Duración:</strong> 9 semestres</p>
+      <p><strong>Perfil de egreso:</strong> Abogado con competencias para ejercer en el ámbito público y privado, con énfasis en la justicia y equidad.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Universidad de Teziutlán (UNTE). Todos los derechos reservados.</p>
+    <p>Contacto: +52 231 313 4735</p>
+  </footer>
+
+</body>
+</html>
