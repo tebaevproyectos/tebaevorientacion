@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Página Web Editable con Imágenes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f2f2f2;
+    }
+    .editable {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1, p {
+      margin: 10px 0;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      cursor: pointer;
+      margin: 10px 0;
+      border: 2px dashed #ccc;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="editable" contenteditable="true">
+    <h1>UNIVERSIDAD VERACRUZANA</h1>
+    <p>La Universidad Veracruzana (UV) es una institución de educación superior pública y autónoma, con distintas sedes a lo largo de México. Es reconocida como una de las universidades de mayor impacto de la República Mexicana y la más importante de Veracruz.[3]​ Por medio de sus funciones de docencia, investigación, difusión de la cultura y extensión de servicios en sus distintas entidades académicas (facultades, institutos de investigación, organismos de difusión y extensión, entre otros) busca conservar, crear y transmitir la cultura para beneficiar a la sociedad. Se rige según las disposiciones de la Ley de Autonomía de la UV, la Ley Orgánica de la UV, el Estatuto General de la UV y los Estatutos y Reglamentos derivados, donde se trata de vincular de modo permanente a la universidad y la educación que esta imparte con la sociedad, atendiendo a las nuevas tendencias y condiciones de desarrollo a nivel nacional e internacional.</p>
+    <p></p>
+    <img src="img01.png" alt="Imagen editable" onclick="cambiarImagen(this)">
+  </div>
+
+  <input type="file" id="fileInput" style="display: none;" accept="image/*">
+
+  <script>
+    function cambiarImagen(imgElement) {
+      const fileInput = document.getElementById('fileInput');
+      fileInput.onchange = function () {
+        const file = this.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            imgElement.src = e.target.result;
+          }
+          reader.readAsDataURL(file);
+        }
+      };
+      fileInput.click();
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+<<html>
+ <head>
+...
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-1">
+  <title>Marquesina azul</title>
+  <style>
+    .marquesina {
+      color: blue;
+      font-size: 50px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <marquee behavior="alternate" class="marquesina">
+    UNIVERCIDAD VERACRUZANA 
+  </marquee>
+
+</body>
+</html>
+
+
+<br><br>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Párrafo con borde verde</title>
+  <style>
+    .parrafo-verde {
+      border: 6px solid green;
+      padding: 65px;
+      width: 80%;
+      margin: 40px auto;
+      font-family: Arial, sans-serif;
+      background-color: #f9fff9;
+    }
+  </style>
+</head>
+<body>
+
+  <p class="parrafo-verde">
+    La Universidad Veracruzana (UV) es una institucion de educacion superior publica y autonoma en Mexico, fundada en 1944 y con autonomia desde 1996. Se encuentra en el estado de Veracruz, con sedes en Xalapa, Veracruz, Orizaba-Cordoba, Poza Rica-Tuxpan y Coatzacoalcos-Minatitlan, entre otras. Es una de las universidades con mayor impacto en Mexico y la mas importante de Veracruz.</center>
+
+<br><br>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-20">
+  <title>Tabla Azul y Gris</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 80%;
+    }
+    td {
+      border: 5px solid #000;
+      padding: 30px;
+      text-align: center;
+    }
+    /* Color azul para columnas impares */
+    td:nth-child(odd) {
+      background-color: lightred;
+    }
+    /* Color gris para columnas pares */
+    td:nth-child(even) {
+      background-color: lightgray;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <tr>
+      <td>correo</td>
+      <td>Correo Electronico emurcia@uv.mx Universidad Veracruzana</td>
+    </tr>
+    <tr>
+      <td>Lada</td>
+      <td>Clave Lada 228â€‹
+Codigo INEGI 300870001â€‹â€‹
+Area metropolitana Zona metropolitana de Xalapa</td>
+    </tr>
+    <tr>
+    </tr>
+  </table>
+</body>
+</html>
+  </p>
+
+</body>
+</html>
+
+
+<br><br>
+
+<td><img src="uv1.jpg" width="500" height="500"></td>
+
+<br>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-1">
+  <title>Marquesina azul</title>
+  <style>
+    .marquesina {
+      color: blue;
+      font-size: 80px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <marquee behavior="alternate" class="marquesina">
+   CARRERAS 
+  </marquee>
+
+</body>
+</html>
+
+<br>
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 80%;
+    }
+    th, td {
+      border: 5px solid #000;
+      padding: 25px;
+      text-align: center;
+    }
+    tr:nth-child(even) {
+      background-color: #d3d3d3; /* Gris */
+    }
+    tr:nth-child(odd) {
+      background-color: #cb4335; /* Rojo */
+    }
+  </style>
+</head>
+<body>
+
+<table>
+  <tr>
+    <th>carreras Biologicas universidadVeracruzana</th>
+    
+  </tr>
+  <!-- 13 filas de datos (1 fila ya es la de encabezado) -->
+  <tr><td>Administración:</td><td>La carrera de Administración es una disciplina que se enfoca en la planificación, organización, dirección y control de los recursos y actividades de una organización para lograr sus objetivos y metas..</td></tr>
+  <tr><td>Administración de negocios internacionales:</td><td>La carrera de Administración de Negocios Internacionales es una disciplina que se enfoca en la gestión y dirección de empresas y organizaciones que operan en un entorno global.</td></tr>
+  <tr><td>Administración turística:</td><td>La carrera de Administración Turística es una disciplina que se enfoca en la gestión y dirección de empresas y organizaciones relacionadas con el turismo.</td></tr>
+  <tr><td>Ciencias políticas:</td><td>La carrera de Ciencias Políticas y Gestión Pública es una disciplina que se enfoca en el estudio de la política, el gobierno y la administración pública.</td></tr>
+  <tr><td>Contaduría:</td><td>La carrera de Contaduría es una disciplina que se enfoca en el estudio de la política, el gobierno y la administración pública.</td></tr>
+  <tr><td>Contaduría:</td><td>La carrera de Contaduría es una disciplina que se enfoca en la preparación, análisis y presentación de información financiera para tomar decisiones informadas en las organizaciones.</td></tr>
+  <tr><td>Economía:</td><td>La carrera de Economía es una disciplina que se enfoca en el estudio de la producción, distribución y consumo de bienes y servicios en una sociedad.</td></tr>
+  <tr><td>Geografía:</td><td>La carrera de Geografía es una disciplina que se enfoca en el estudio de la Tierra y sus características físicas y humanas.</td></tr>
+  <tr><td>Gestion y dirección de negocios :</td><td>La carrera de Gestión y Dirección de Negocios es una disciplina que se enfoca en la planificación, organización, dirección y control de las organizaciones para lograr sus objetivos y metas.</td></tr>
+  
+ 
+</table>
+
+</body>
+</html>
+
+
+
+<<html>
+ <head>
+...
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-1">
+  <title>Marquesina azul</title>
+  <style>
+    .marquesina {
+      color: blue;
+      font-size: 50px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <marquee behavior="alternate" class="marquesina">
+    FACULTADES DE LA UV
+  </marquee>
+
+</body>
+</html>
+
+
+<br><br>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Párrafo con borde verde</title>
+  <style>
+    .parrafo-verde {
+      border: 6px solid green;
+      padding: 65px;
+      width: 80%;
+      margin: 40px auto;
+      font-family: Arial, sans-serif;
+      background-color: #f9fff9;
+    }
+  </style>
+</head>
+<body>
+
+  <p class="parrafo-verde">
+  En la región de Xalapa de la Universidad Veracruzana (UV), existen diversas facultades que ofrecen programas educativos en áreas como artes, ciencias biológicas, ciencias de la salud, económico-administrativas, humanidades y técnica. Algunas de estas facultades incluyen la Facultad de Artes Plásticas, la Facultad de Biología, la Facultad de Medicina, la Facultad de Contaduría y Administración, la Facultad de Derecho, la Facultad de Filosofía, la Facultad de Historia, y la Facultad de Ingeniería Mecánica y Eléctrica. </center>
+
+<br><br>
+
+
+
+</body>
+</html>
+
+
+<br><br>
+
+<td><img src="uv2.jpeg" width="500" height="500"></td>
+
+<br>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-1">
+  <title>Marquesina azul</title>
+  <style>
+    .marquesina {
+      color: blue;
+      font-size: 80px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <marquee behavior="alternate" class="marquesina">
+   FACULTADES 
+  </marquee>
+
+</body>
+</html>
+
+<br>
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 80%;
+    }
+    th, td {
+      border: 5px solid #000;
+      padding: 25px;
+      text-align: center;
+    }
+    tr:nth-child(even) {
+      background-color: #d3d3d3; /* Gris */
+    }
+    tr:nth-child(odd) {
+      background-color: #cb4335; /* Rojo */
+    }
+  </style>
+</head>
+<body>
+
+<table>
+  <tr>
+    <th>FACULTADES DE LA UV</th>
+    
+  </tr>
+  <!-- 13 filas de datos (1 fila ya es la de encabezado) -->
+  <tr><td>ARTES:</td><td>Facultad de Artes Plásticas, Facultad de Danza, Facultad de Música..</td></tr>
+  <tr><td>Ciencias Biológicas y Agropecuarias:</td><td>Facultad de Biología, Facultad de Ciencias Agrícolas.</td></tr>
+  <tr><td>Ciencias de la Salud:</td><td>Facultad de Bioanálisis, Facultad de Enfermería, Facultad de Medicina, Facultad de Nutrición, Facultad de Odontología.</td></tr>
+  <tr><td>Económico-Administrativas:</td><td>Facultad de Contaduría y Administración, Facultad de Economía, Facultad de Estadística e Informática, Facultad de Ciencias Administrativas y Sociales.</td></tr>
+  <tr><td>Humanidades:</td><td>Facultad de Derecho, Facultad de Sociología, Facultad de Antropología, Facultad de Filosofía, Facultad de Historia, Facultad de Idiomas, Facultad de Letras Españolas, Facultad de Pedagogía.</td></tr>
+  <tr><td>Técnica:</td><td>Facultad de Arquitectura, Facultad de Física, Facultad de Matemáticas, Facultad de Ingeniería Civil, Facultad de Química Farmacéutica Biológica, Facultad de Ciencias Químicas, Facultad de Ingeniería Mecánica y Eléctrica, Facultad de Instrumentación Electrónica. </td></tr>
+  
+  
+ 
+</table>
+
+</body>
+</html>

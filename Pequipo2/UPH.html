@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Página Web Editable con Imágenes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f2f2f2;
+    }
+    .editable {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1, p {
+      margin: 10px 0;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      cursor: pointer;
+      margin: 10px 0;
+      border: 2px dashed #ccc;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="editable" contenteditable="true">
+    <h1>UNIVERSIDAD POLITECNICA DE HUASTUCO</h1>
+    <p>BIENVENIDOS
+
+
+Somos una institución pública perteneciente al sistema de educación tecnológica del estado de Veracruz, México, con más de 15 años de experiencia ofertando carreras con un modelo educativo basado en competencias. La Universidad Politécnica de Huatusco, fue creada para ofrecer programas educativos basados en competencias, las cuales consisten en desarrollar en el estudiante conocimientos y habilidades necesarios para enfrentar con éxito sus actividades profesionales; con una sólida formación científica, tecnológica y en valores cívicos, éticos y conscientes del contexto nacional e internacional en materia del medio ambiente, para el desarrollo económico y social de la región, del Estado y de la nación.
+
+
+Misión
+Formar profesionistas de acuerdo a un modelo educativo basado en competencias, desarrollando conocimientos, habilidades, actitudes y valores, a través de programas educativos pertinentes, orientados por personal docente y administrativo comprometido con el desarrollo sustentable, vinculados con proyectos de investigación, aplicada que impacten en el ámbito social, científico y tecnológico a nivel regional, nacional e internacional.
+
+
+Visión
+Ser una institución de excelencia que integre programas educativos de licenciatura y posgrado acreditados con reconocimiento a nivel nacional e internacional, así como cuerpos académicos consolidados en vinculación con el sector productivo y social, coadyuvando al desarrollo sustentable.
+
+
+
+Política de Calidad
+Somos una institución de educación superior responsable con la calidad educativa, comprometida con la igualdad laboral y la no discriminación, los valores y el respeto al ambiente, para la formación de profesionistas mediante la generación, aplicación y difusión del conocimiento, la investigación aplicada y la cultura; con una visión de mejora continua, sostenibilidad y prevención de la contaminación, asegurando el cumplimiento de la legislación aplicable.
+
+
+.</p>
+    <p></p>
+    <img src="img06.jpg" alt="Imagen editable" onclick="cambiarImagen(this)">
+  </div>
+
+  <input type="file" id="fileInput" style="display: none;" accept="image/*">
+
+  <script>
+    function cambiarImagen(imgElement) {
+      const fileInput = document.getElementById('fileInput');
+      fileInput.onchange = function () {
+        const file = this.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            imgElement.src = e.target.result;
+          }
+          reader.readAsDataURL(file);
+        }
+      };
+      fileInput.click();
+    }
+  </script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Página Web Editable con Imágenes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f2f2f2;
+    }
+    .editable {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1, p {
+      margin: 10px 0;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      cursor: pointer;
+      margin: 10px 0;
+      border: 2px dashed #ccc;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="editable" contenteditable="true">
+    <h1>UNICA CARRERA DE ECONÓMICO ADMINISTRATIVO </h1>
+    <p>Licenciatura en Administración y Gestión Empresarial (LAGE). Esta licenciatura tiene como objetivo formar profesionales con habilidades en áreas como administración de la calidad, sueldos y salarios, y finanzas. 
+En detalle:
+Licenciatura en Administración y Gestión Empresarial (LAGE):
+Esta es la principal carrera relacionada con la administración y la economía en la Universidad Politécnica de Huatusco. 
+Áreas de estudio:
+La LAGE incluye materias que abordan la administración de la calidad, sueldos y salarios, finanzas, econometría, liderazgo de equipos y mercadotecnia estratégica. 
+Desarrollo profesional:
+Los egresados de la LAGE pueden desempeñarse en empresas de manufactura y producción, empresas financieras, y aquellas que apoyan a las MIPYMES. 
+Flexibilidad:
+La LAGE se ofrece en sistemas escolarizado y sabatino. 
+Beneficios adicionales:
+La universidad ofrece cursos de inglés, becas, y titulación automática con doble título (TSU en Emprendimiento y Formulación y Evaluación de proyectos.</p>
+    <p></p>
+    <img src="uph 2.jpg" alt="Imagen editable" onclick="cambiarImagen(this)">
+  </div>
+
+  <input type="file" id="fileInput" style="display: none;" accept="image/*">
+
+  <script>
+    function cambiarImagen(imgElement) {
+      const fileInput = document.getElementById('fileInput');
+      fileInput.onchange = function () {
+        const file = this.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            imgElement.src = e.target.result;
+          }
+          reader.readAsDataURL(file);
+        }
+      };
+      fileInput.click();
+    }
+  </script>
+</body>
+</html>

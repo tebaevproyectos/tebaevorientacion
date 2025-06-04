@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Página Web Editable con Imágenes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f2f2f2;
+    }
+    .editable {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1, p {
+      margin: 10px 0;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      cursor: pointer;
+      margin: 10px 0;
+      border: 2px dashed #ccc;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="editable" contenteditable="true">
+    <h1>UNIVERSIDAD DEL VALLE DE MEXICO</h1>
+    <p>La Universidad del Valle de México (UVM) es una universidad privada mexicana fundada en el año de 1960. En su inicio su nombre era Institución Harvard, denominación que conservaría hasta 1968, año en el cuál obtuvo su nombre actual. Atiende a cerca de 129,000 estudiantes de preparatoria, licenciatura y posgrado[3]​ y forma parte de la red Laureate International Universities de instituciones privadas de educación superior.[4]​
+
+La UVM ofrece programas de educación media superior, superior y de posgrado, ofrece programas académicos a través de 37 campus en el país con las divisiones: Ciencias de la Salud, Ingeniería, Hospitalidad-Turismo y Gastronomía, Negocios, Ciencias Sociales y la División de Arte, Diseño y Arquitectura, entre otras carreras, además de sus licenciaturas y posgrados en línea, es una escuela muy reconocida y preparada para formar a excelentes profesionales en sus respectivas áreas .[4]​
+
+Entre sus egresados, se encuentran: Ricardo Anaya Cortés, político mexicano; Iván Alejandro García Navarro y Germán Saúl Sánchez Sánchez, ambos medallistas olímpicos en natación y clavados;[5]​ Vanessa Zambotti, judoca mexicana subcampeona de los Juegos Panamericanos de 2015;[6]​ el medallista taekwondoín Victor Estrada; José Ramón Amieva, quien fue Jefe de Gobierno de la Ciudad de México;[7]​ y Alexa Moreno, medallista de bronce en salto de caballo en el Mundial de Gimnasia Artística de 2019.</p>
+    <p></p>
+    <img src="img14.jpg" alt="Imagen editable" onclick="cambiarImagen(this)">
+  </div>
+
+  <input type="file" id="fileInput" style="display: none;" accept="image/*">
+
+  <script>
+    function cambiarImagen(imgElement) {
+      const fileInput = document.getElementById('fileInput');
+      fileInput.onchange = function () {
+        const file = this.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            imgElement.src = e.target.result;
+          }
+          reader.readAsDataURL(file);
+        }
+      };
+      fileInput.click();
+    }
+  </script>
+</body>
+</html>
+
+
+
+<<html>
+ <head>
+...
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-1">
+  <title>Marquesina azul</title>
+  <style>
+    .marquesina {
+      color: blue;
+      font-size: 50px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <marquee behavior="alternate" class="marquesina">
+   UNIVERSIDAD DEL VALLE DE MÉXICO 
+(PRIVADA)
+  </marquee>
+
+</body>
+</html>
+
+
+<br><br>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Párrafo con borde verde</title>
+  <style>
+    .parrafo-verde {
+      border: 6px solid green;
+      padding: 65px;
+      width: 80%;
+      margin: 40px auto;
+      font-family: Arial, sans-serif;
+      background-color: #f9fff9;
+    }
+  </style>
+</head>
+<body>
+
+  <p class="parrafo-verde">
+    La Universidad del Valle de México (UVM) fue fundada en 1960 bajo el nombre de "Institución Harvard", con el objetivo de impartir clases de negocios. En 1968, cambió su nombre a "Universidad del Valle de México". A partir de 1976, la UVM comenzó a expandirse con la apertura de diversos planteles en diferentes ciudades de México. 
+Campus
+La UVM (Universidad del Valle de México) tiene 26 campus en México. Estos campus están ubicados en 18 estados de la República Mexicana. 
+</center>
+
+<br><br>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-20">
+  <title>Tabla Rojo y Gris</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 80%;
+    }
+    td {
+      border: 5px solid #000;
+      padding: 30px;
+      text-align: center;
+    }
+    /* Color Rojo para columnas verticales */
+    td:nth-child(odd) {
+      background-color: lightred;
+    }
+    /* Color gris para columnas horizontales */
+    td:nth-child(even) {
+      background-color: lightgray;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <tr>
+      <td>correo</td>
+      <td>TELEFONO: 800 0000 886 Universidad UVM</td>
+    </tr>
+    <tr>
+      <td>Lada</td>
+      <td>UVM Universidad del valle de México, S.C., Av Marina Nacional 180, Anáhuac 1 sección, Delegación Miguel Hidalgo, Ciudad de México, C.P. 11320.</td>
+    </tr>
+    <tr>
+    </tr>
+  </table>
+</body>
+</html>
+  </p>
+
+</body>
+</html>
+
+
+<br><br>
+
+<td><img src="uv.jpg" width="500" height="500"></td>
+
+<br>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-1">
+  <title>Marquesina azul</title>
+  <style>
+    .marquesina {
+      color: blue;
+      font-size: 80px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <marquee behavior="alternate" class="marquesina">
+   LICENCIATURAS
+  </marquee>
+
+</body>
+</html>
+
+<br>
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 80%;
+    }
+    th, td {
+      border: 5px solid #000;
+      padding: 25px;
+      text-align: center;
+    }
+    tr:nth-child(even) {
+      background-color: #d3d3d3; /* Gris */
+    }
+    tr:nth-child(odd) {
+      background-color: #cb4335; /* Rojo */
+    }
+  </style>
+</head>
+<body>
+
+<table>
+  <tr>
+    <th>licenciaturas económicas administrativas universidad UVM</th>
+    
+  </tr>
+  <!-- 13 filas de datos (1 fila ya es la de encabezado) -->
+  <tr><td>Licenciatura en Economía y Finanzas:</td><td>Esta carrera te prepara para enfrentar los retos del entorno económico global, con un enfoque en la toma de decisiones estratégicas en empresas, gobiernos y personas.   </td></tr>
+  <tr><td>Licenciatura Ejecutiva en Economía y Finanzas: </td><td>Esta modalidad te proporciona una visión global de los negocios y las finanzas corporativas, con un enfoque práctico y tecnológico.   </td></tr>
+  <tr><td>Licenciatura en Administración de Empresas:</td><td>Esta carrera te brinda los conocimientos y herramientas necesarias para optimizar los recursos económicos y humanos de una organización, con énfasis en la gestión estratégica y la innovación.   </td></tr>
+  <tr><td>Licenciatura en Administración de Empresas del Entretenimiento:</td><td>Esta carrera te prepara para la gestión y el desarrollo de negocios en el sector del entretenimiento, con un enfoque en la creación, producción y distribución de contenidos.    </td></tr>
+  <tr><td>Licenciatura en Contaduría Pública y Finanzas:</td><td>Esta carrera te forma en la gestión contable y financiera, con un enfoque en la normativa fiscal y la aplicación de software especializados.   .</td></tr>
+  
+ 
+</table>
+
+</body>
+</html>

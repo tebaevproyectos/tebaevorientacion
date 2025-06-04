@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Página Web Editable con Imágenes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f2f2f2;
+    }
+    .editable {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1, p {
+      margin: 10px 0;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      cursor: pointer;
+      margin: 10px 0;
+      border: 2px dashed #ccc;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="editable" contenteditable="true">
+    <h1>IBERO PUEBLA</h1>
+    <p>La Universidad Iberoamericana Puebla es una institución privada de educación superior y media superior confiada a la Compañía de Jesús, ubicada en el municipio de San Andrés Cholula, en el estado de Puebla, México. La casa de estudios pertenece al Sistema Universitario Jesuita (SUJ) y a la Asociación de Universidades Confiadas a la Compañía de Jesús en América Latina (AUSJAL).</p>
+    <p></p>
+    <img src="img12.png" alt="Imagen editable" onclick="cambiarImagen(this)">
+  </div>
+
+  <input type="file" id="fileInput" style="display: none;" accept="image/*">
+
+  <script>
+    function cambiarImagen(imgElement) {
+      const fileInput = document.getElementById('fileInput');
+      fileInput.onchange = function () {
+        const file = this.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            imgElement.src = e.target.result;
+          }
+          reader.readAsDataURL(file);
+        }
+      };
+      fileInput.click();
+    }
+  </script>
+</body>
+</html>
+
+
+
+<<html>
+ <head>
+...
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-1">
+  <title>Marquesina azul</title>
+  <style>
+    .marquesina {
+      color: blue;
+      font-size: 50px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <marquee behavior="alternate" class="marquesina">
+   UNIVERSIDAD IBERO PUEBLA 
+(PRIVADA)
+  </marquee>
+
+</body>
+</html>
+
+
+<br><br>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Párrafo con borde verde</title>
+  <style>
+    .parrafo-verde {
+      border: 6px solid green;
+      padding: 65px;
+      width: 80%;
+      margin: 40px auto;
+      font-family: Arial, sans-serif;
+      background-color: #f9fff9;
+    }
+  </style>
+</head>
+<body>
+
+  <p class="parrafo-verde">
+    1940
+La Universidad Iberoamericana Puebla (antes UIA Plantel Golfo-Centro) fue fundada en 1983 como respuesta a la necesidad de una institución de educación superior jesuita para la región centro-sur-sureste de México. Es una institución de educación media superior y superior, que se considera joven, pero con raíces profundas en la historia de Puebla y el sur de México. 
+Campus
+La IBERO Puebla cuenta con dos campus principales: el Campus Puebla y el Campus Tlaxcala. El Campus Puebla se ubica en la zona de Angelópolis y San Andrés Cholula, contando con un conjunto de 13 edificios que incluyen salones, laboratorios, oficinas y áreas de uso común. El Campus Tlaxcala se encuentra en el estado de Tlaxcala. 
+</center>
+
+<br><br>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-20">
+  <title>Tabla Azul y Gris</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 80%;
+    }
+    td {
+      border: 5px solid #000;
+      padding: 30px;
+      text-align: center;
+    }
+    /* Color azul para columnas impares */
+    td:nth-child(odd) {
+      background-color: lightred;
+    }
+    /* Color gris para columnas pares */
+    td:nth-child(even) {
+      background-color: lightgray;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <tr>
+      <td>correo</td>
+      <td>  webmaster@iberopuebla.mx Universidad IBERO PUEBLA</td>
+    </tr>
+    <tr>
+      <td>Lada</td>
+      <td>Blvd. del Niño Poblano No. 2901, Colonia Reserva Territorial Atlixcáyotl, San Andrés Cholula, Pue. C. P. 728</td>
+    </tr>
+    <tr>
+    </tr>
+  </table>
+</body>
+</html>
+  </p>
+
+</body>
+</html>
+
+
+<br><br>
+
+<td><img src="ibero2.webp" width="500" height="500"></td>
+
+<br>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-1">
+  <title>Marquesina azul</title>
+  <style>
+    .marquesina {
+      color: blue;
+      font-size: 80px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <marquee behavior="alternate" class="marquesina">
+   LICENTCIATURAS
+  </marquee>
+
+</body>
+</html>
+
+<br>
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 80%;
+    }
+    th, td {
+      border: 5px solid #000;
+      padding: 25px;
+      text-align: center;
+    }
+    tr:nth-child(even) {
+      background-color: #d3d3d3; /* Gris */
+    }
+    tr:nth-child(odd) {
+      background-color: #cb4335; /* Rojo */
+    }
+  </style>
+</head>
+<body>
+
+<table>
+  <tr>
+    <th>Licenciaturas económicas administrativas universidad IBERO PUEBLA</th>
+    
+  </tr>
+  <!-- 13 filas de datos (1 fila ya es la de encabezado) -->
+  <tr><td>Administración de Empresas:</td><td>Esta licenciatura prepara a los estudiantes para desarrollar modelos de negocio y propuestas de emprendimiento con una visión de responsabilidad social, buscando la eficiencia de las organizaciones.   </td></tr>
+  <tr><td>Comercio Internacional: </td><td>Esta licenciatura se enfoca en la gestión de empresas que operan en el ámbito internacional, incluyendo la negociación, logística y comercialización.   </td></tr>
+  <tr><td>AContaduría y Estrategias Financieras:</td><td>Los estudiantes aprenden a diseñar estrategias financieras, contables, fiscales y de auditoría, así como a liderar la contraloría y tesorería de las organizaciones  </td></tr>
+  <tr><td>Mercadotecnia:</td><td>Esta carrera Esta licenciatura se enfoca en el estudio y aplicación de estrategias de marketing para promover productos y servicios en el mercado. 
+ </td></tr>
+  <tr><td>Negocios Internacionales:</td><td>Esta licenciatura se enfoca en la gestión de negocios en el contexto internacional, incluyendo la estrategia, la logística y la cultura.  .</td></tr>
+  
+ 
+</table>
+
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Página Web Editable con Imágenes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f2f2f2;
+    }
+    .editable {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1, p {
+      margin: 10px 0;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      cursor: pointer;
+      margin: 10px 0;
+      border: 2px dashed #ccc;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="editable" contenteditable="true">
+    <h1>ANAHUAC PUEBLA</h1>
+    <p>La Universidad Anáhuac Puebla es una universidad privada mexicana de la red de Universidades Anáhuac. Fue fundada en 1964, con el objetivo primordial de elevar la condición humana y social de los hombres y mujeres de México mediante una formación integral.[2]​
+
+A partir del 2016, con el objetivo de remarcar la fortaleza de la institución, la Universidad Anáhuac México realizó el proceso de integración entre la Anáhuac México Norte y la Anáhuac México Sur, y quedó integrada por dos campus: Campus Norte, en Huixquilucan, Estado de México y Campus Sur, en avenida de las Torres, en la Ciudad de México.</p>
+    <p></p>
+    <img src="img13.png" alt="Imagen editable" onclick="cambiarImagen(this)">
+  </div>
+
+  <input type="file" id="fileInput" style="display: none;" accept="image/*">
+
+  <script>
+    function cambiarImagen(imgElement) {
+      const fileInput = document.getElementById('fileInput');
+      fileInput.onchange = function () {
+        const file = this.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            imgElement.src = e.target.result;
+          }
+          reader.readAsDataURL(file);
+        }
+      };
+      fileInput.click();
+    }
+  </script>
+</body>
+</html>
+
+
+
+<<html>
+ <head>
+...
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-1">
+  <title>Marquesina azul</title>
+  <style>
+    .marquesina {
+      color: blue;
+      font-size: 50px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <marquee behavior="alternate" class="marquesina">
+   ANÁHUAC PUEBLA 
+(PRIVADA)
+  </marquee>
+
+</body>
+</html>
+
+
+<br><br>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Párrafo con borde verde</title>
+  <style>
+    .parrafo-verde {
+      border: 6px solid green;
+      padding: 65px;
+      width: 80%;
+      margin: 40px auto;
+      font-family: Arial, sans-serif;
+      background-color: #f9fff9;
+    }
+  </style>
+</head>
+<body>
+
+  <p class="parrafo-verde">
+    La historia de la Universidad Anáhuac Puebla (Anáhuac Puebla) es parte de la Red de Universidades Anáhuac, fundada en 2003. Según Mextudia, esta institución se enfoca en la formación integral de estudiantes, promoviendo tanto la excelencia académica como el desarrollo personal y profesional. La Anáhuac Puebla se ha posicionado como una de las mejores universidades de Puebla. 
+
+Sedes
+La sede en Puebla está ubicada en San Andrés Cholula, a unos metros del Periférico Ecológico y de las Torres Médicas Angelópolis, a 24 minutos del centro de la ciudad. La dirección específica es Av Orion Nte S/N, Tlaxcalancingo, Magisterio 2000 I, 72810 Tlaxcalancingo, Pue. 
+</center>
+
+<br><br>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-20">
+  <title>Tabla Azul y Gris</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 80%;
+    }
+    td {
+      border: 5px solid #000;
+      padding: 30px;
+      text-align: center;
+    }
+    /* Color azul para columnas impares */
+    td:nth-child(odd) {
+      background-color: lightred;
+    }
+    /* Color gris para columnas pares */
+    td:nth-child(even) {
+      background-color: lightgray;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <tr>
+      <td>correo</td>
+      <td>Tel Anáhuac: 222-169-1069
+Ext: 237, 269, 313, 348, 350, 359 y 376 Universidad ANAHUAC PUEBLA</td>
+    </tr>
+    <tr>
+      <td>Lada</td>
+      <td>Calle Orión Norte S/N Col. La Vista Country Club, San Andrés Cholula Puebla, CP. 72810</td>
+    </tr>
+    <tr>
+    </tr>
+  </table>
+</body>
+</html>
+  </p>
+
+</body>
+</html>
+
+
+<br><br>
+
+<td><img src="anahuac.jpg" width="500" height="500"></td>
+
+<br>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-1">
+  <title>Marquesina azul</title>
+  <style>
+    .marquesina {
+      color: blue;
+      font-size: 80px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <marquee behavior="alternate" class="marquesina">
+   CARRERAS 
+  </marquee>
+
+</body>
+</html>
+
+<br>
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 80%;
+    }
+    th, td {
+      border: 5px solid #000;
+      padding: 25px;
+      text-align: center;
+    }
+    tr:nth-child(even) {
+      background-color: #d3d3d3; /* Gris */
+    }
+    tr:nth-child(odd) {
+      background-color: #cb4335; /* Rojo */
+    }
+  </style>
+</head>
+<body>
+
+<table>
+  <tr>
+    <th>carreras económicas administrativas ANÁHUAC PUEBLA</th>
+    
+  </tr>
+  <!-- 13 filas de datos (1 fila ya es la de encabezado) -->
+  <tr><td>Administración y Dirección de Empresas:</td><td>Esta carrera prepara a los estudiantes para roles de liderazgo y gestión en diversas áreas de la empresa, como dirección general, planeación estratégica y comercialización.   </td></tr>
+  <tr><td>Economía: </td><td>La carrera de Economía forma profesionales capaces de analizar y comprender el entorno socioeconómico para ofrecer soluciones a problemas públicos y privados, y proponer políticas para el crecimiento económico.  </td></tr>
+  <tr><td>Finanzas y Contaduría Pública:</td><td>Esta carrera prepara a los estudiantes para analizar y gestionar el entorno económico y financiero, desde la planeación financiera hasta la gestión de riesgos, la valuación financiera y la administración de activos, entre otras cosas.   </td></tr>
+  <tr><td>Mercadotecnia Estratégica:</td><td>Se enfoca en la creación de estrategias de marketing para el crecimiento y éxito de las empresas.    </td></tr>
+  <tr><td>Negocios Internacionales:</td><td>Esta carrera prepara a los estudiantes para trabajar en el ámbito internacional, analizando mercados globales, estrategias de inversión y negociación comercial.  .</td></tr>
+  
+ 
+</table>
+
+</body>
+</html>

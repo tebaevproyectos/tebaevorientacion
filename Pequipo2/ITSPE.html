@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Página Web Editable con Imágenes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f2f2f2;
+    }
+    .editable {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1, p {
+      margin: 10px 0;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      cursor: pointer;
+      margin: 10px 0;
+      border: 2px dashed #ccc;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="editable" contenteditable="true">
+    <h1>INSTITUTO TECNOLOGICO SUPERIOR DE PEROTE</h1>
+    <p>Instituto Tecnológico Superior De Perote es una institución de formación profesional, con presencia según matrículas en 2022 en Veracruz de Ignacio de la Llave
+centrando la mayor parte del estudiantado en los municipios de Perote
+En 2022, Instituto Tecnológico Superior De Perote tuvo 1,361 matriculados, de los cuales 55.4%  (754) fueron hombres y 44.6% (607) fueron mujeres.
+
+En 2022, la institución tuvo 167 egresados, de estos 90 fueron hombres y 77 mujeres. Las áreas con más egresados fueron Ingeniería, manufactura y construcción (81), Administración y negocios (42) y Agronomía y veterinaria (24).</p>
+    <p></p>
+    <img src="img05.jpg" alt="Imagen editable" onclick="cambiarImagen(this)">
+  </div>
+
+  <input type="file" id="fileInput" style="display: none;" accept="image/*">
+
+  <script>
+    function cambiarImagen(imgElement) {
+      const fileInput = document.getElementById('fileInput');
+      fileInput.onchange = function () {
+        const file = this.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            imgElement.src = e.target.result;
+          }
+          reader.readAsDataURL(file);
+        }
+      };
+      fileInput.click();
+    }
+  </script>
+</body>
+</html>

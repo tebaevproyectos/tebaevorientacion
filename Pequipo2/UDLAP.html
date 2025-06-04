@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Página Web Editable con Imágenes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f2f2f2;
+    }
+    .editable {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1, p {
+      margin: 10px 0;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      cursor: pointer;
+      margin: 10px 0;
+      border: 2px dashed #ccc;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="editable" contenteditable="true">
+    <h1>UNIVERSIDAD DE LAS AMERICAS DE PUEBLA</h1>
+    <p>La Universidad de las Américas Puebla (UDLAP) es una universidad privada ubicada en la ex Hacienda Santa Catarina Mártir, en San Andrés Cholula, Puebla, México. Se encuentra clasificada como Institución de Nivel VI, en la Southern Association of Colleges and Schools - Commission on Colleges (SACSCOC).[1]​
+
+Fue fundada en 1940 bajo el nombre de Mexico City College. En 1966 la Fundación Mary Street Jenkins asignó los fondos necesarios para que se estableciera en Cholula, mudándose en 1970 a su sede actual. En 1985 se separó de la Universidad de las Américas A.C, manteniéndose como instituciones independientes hasta la fecha.
+
+La UDLAP es reconocida como una de las principales instituciones de educación superior en México y goza de reconocimiento internacional.[2]​[3]​[4]​[5]​
+
+Su rector es el Dr. Luis Ernesto Derbez Bautista, exsecretario de Relaciones Exteriores y Economía de México.</p>
+    <p></p>
+    <img src="img11.png" alt="Imagen editable" onclick="cambiarImagen(this)">
+  </div>
+
+  <input type="file" id="fileInput" style="display: none;" accept="image/*">
+
+  <script>
+    function cambiarImagen(imgElement) {
+      const fileInput = document.getElementById('fileInput');
+      fileInput.onchange = function () {
+        const file = this.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            imgElement.src = e.target.result;
+          }
+          reader.readAsDataURL(file);
+        }
+      };
+      fileInput.click();
+    }
+  </script>
+</body>
+</html>
+
+
+
+<<html>
+ <head>
+...
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-1">
+  <title>Marquesina azul</title>
+  <style>
+    .marquesina {
+      color: blue;
+      font-size: 50px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <marquee behavior="alternate" class="marquesina">
+   UNIVERSIDAD DE LAS AMÉRICAS DE PUEBLA
+(PRIVADA)
+  </marquee>
+
+</body>
+</html>
+
+
+<br><br>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Párrafo con borde verde</title>
+  <style>
+    .parrafo-verde {
+      border: 6px solid green;
+      padding: 65px;
+      width: 80%;
+      margin: 40px auto;
+      font-family: Arial, sans-serif;
+      background-color: #f9fff9;
+    }
+  </style>
+</head>
+<body>
+
+  <p class="parrafo-verde">
+    1940
+La Universidad de las Américas Puebla fue fundada en 1940, en la capital del país con el nombre de Mexico City College.
+Campus
+La UDLAP tiene un solo campus ubicado en Cholula, Puebla. Este campus es reconocido por su tamaño y calidad académica, siendo la primera universidad en América Latina con un solo campus en recibir la calificación de 5 estrellas en la auditoría internacional QS Stars. 
+</center>
+
+<br><br>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-20">
+  <title>Tabla Azul y Gris</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 80%;
+    }
+    td {
+      border: 5px solid #000;
+      padding: 30px;
+      text-align: center;
+    }
+    /* Color azul para columnas impares */
+    td:nth-child(odd) {
+      background-color: lightred;
+    }
+    /* Color gris para columnas pares */
+    td:nth-child(even) {
+      background-color: lightgray;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <tr>
+      <td>correo</td>
+      <td>informes.nuevoingreso@udlap.mx +52 (222) 229 2112 Universidad UDLAP</td>
+    </tr>
+    <tr>
+      <td>Lada</td>
+      <td>Universidad de las Américas Puebla. Ex hacienda Sta. Catarina Mártir S/N. San Andrés Cholula, Puebla. C.P. 72810. México
+</td>
+    </tr>
+    <tr>
+    </tr>
+  </table>
+</body>
+</html>
+  </p>
+
+</body>
+</html>
+
+
+<br><br>
+
+<td><img src="udlap.jpg" width="500" height="500"></td>
+
+<br>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-1">
+  <title>Marquesina azul</title>
+  <style>
+    .marquesina {
+      color: blue;
+      font-size: 80px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <marquee behavior="alternate" class="marquesina">
+   CARRERAS 
+  </marquee>
+
+</body>
+</html>
+
+<br>
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 80%;
+    }
+    th, td {
+      border: 5px solid #000;
+      padding: 25px;
+      text-align: center;
+    }
+    tr:nth-child(even) {
+      background-color: #d3d3d3; /* Gris */
+    }
+    tr:nth-child(odd) {
+      background-color: #cb4335; /* Rojo */
+    }
+  </style>
+</head>
+<body>
+
+<table>
+  <tr>
+    <th>carreras económicas administrativas universidad UDLAP</th>
+    
+  </tr>
+  <!-- 13 filas de datos (1 fila ya es la de encabezado) -->
+  <tr><td>Administración de Empresas:</td><td>Esta carrera busca formar líderes éticos y generadores de cambio, capacitados para gestionar y dirigir empresas con un enfoque integral y vanguardista.  </td></tr>
+  <tr><td>Administración de la Manufactura: </td><td>Esta carrera se enfoca en la gestión de la producción y la optimización de procesos en el sector manufacturero.  </td></tr>
+  <tr><td>Administración Energética:</td><td>Esta carrera se especializa en la gestión de recursos energéticos, con un enfoque en la eficiencia y sostenibilidad.  </td></tr>
+  <tr><td>Dirección de Negocios::</td><td>Esta carrera busca formar líderes capaces de dirigir y tomar decisiones estratégicas en el ámbito empresarial.   </td></tr>
+  <tr><td>Finanzas Corporativas:</td><td>Esta carrera se enfoca en la gestión financiera de las empresas, incluyendo la planificación, el control y la inversión.  .</td></tr>
+  
+ 
+</table>
+
+</body>
+</html>

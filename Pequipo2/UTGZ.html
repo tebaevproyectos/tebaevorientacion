@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Página Web Editable con Imágenes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f2f2f2;
+    }
+    .editable {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1, p {
+      margin: 10px 0;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      cursor: pointer;
+      margin: 10px 0;
+      border: 2px dashed #ccc;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="editable" contenteditable="true">
+    <h1>UNIVERSIDAD TECNOLOGICA DE GUTIERREZ ZAMORA</h1>
+    <p>BIENVENIDO A LA UTGZ
+Universidad Bilingüe Internacional y Sustentable Tiene como finalidad ofrecer formación profesional a los jóvenes, en las áreas de mayor demanda laboral nacional e internacionalmente, permitiéndoles desarrollar sus capacidades para integrarse bajo las mejores condiciones al sector productivo. La doble titulación (TSU e Ingeniería) y el modelo 100% bilingüe, complementan la formación académica de los beneficiarios, impulsando su desarrollo personal y profesional.</p>
+    <p></p>
+    <img src="img09.png" alt="Imagen editable" onclick="cambiarImagen(this)">
+  </div>
+
+  <input type="file" id="fileInput" style="display: none;" accept="image/*">
+
+  <script>
+    function cambiarImagen(imgElement) {
+      const fileInput = document.getElementById('fileInput');
+      fileInput.onchange = function () {
+        const file = this.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            imgElement.src = e.target.result;
+          }
+          reader.readAsDataURL(file);
+        }
+      };
+      fileInput.click();
+    }
+  </script>
+</body>
+</html>
+
+
+<<html>
+ <head>
+...
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-1">
+  <title>Marquesina azul</title>
+  <style>
+    .marquesina {
+      color: blue;
+      font-size: 50px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <marquee behavior="alternate" class="marquesina">
+   UNIVERSIDAD TECNOLÓGICA DE GUTIÉRREZ ZAMORA 
+  </marquee>
+
+</body>
+</html>
+
+
+<br><br>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Párrafo con borde verde</title>
+  <style>
+    .parrafo-verde {
+      border: 6px solid green;
+      padding: 65px;
+      width: 80%;
+      margin: 40px auto;
+      font-family: Arial, sans-serif;
+      background-color: #f9fff9;
+    }
+  </style>
+</head>
+<body>
+
+  <p class="parrafo-verde">
+    La Universidad Tecnológica de Gutiérrez Zamora, Veracruz (UTGZ), fue creada mediante decreto el 3 de noviembre de 2006, publicado en la Gaceta Oficial del Estado. Se trata de una institución pública de educación superior cuyo objetivo es formar profesionales en áreas de alta demanda laboral. La UTGZ se enfoca en brindar una formación profesional integral, promoviendo el desarrollo de habilidades y capacidades para la inserción en el sector productivo. 
+
+Sedes:
+
+- La UTGZ (Universidad Tecnológica de Gutiérrez Zamora) tiene dos sedes principales: una en Gutiérrez Zamora y otra en Altotonga. 
+</center>
+
+<br><br>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-20">
+  <title>Tabla Azul y Gris</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 80%;
+    }
+    td {
+      border: 5px solid #000;
+      padding: 30px;
+      text-align: center;
+    }
+    /* Color azul para columnas impares */
+    td:nth-child(odd) {
+      background-color: lightred;
+    }
+    /* Color gris para columnas pares */
+    td:nth-child(even) {
+      background-color: lightgray;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <tr>
+      <td>correo</td>
+      <td>7668451883 | 7668451817
+informes@utgz.edu.mx Universidad UTGZ</td>
+    </tr>
+    <tr>
+      <td>Lada</td>
+      <td>Carretera Gutiérrez Zamora - Boca de Lima, km 2.5 Gutiérrez Zamora, Ver.
+
+    </tr>
+    <tr>
+    </tr>
+  </table>
+</body>
+</html>
+  </p>
+
+</body>
+</html>
+
+
+<br><br>
+
+<td><img src="UTGZ.jpg" width="500" height="500"></td>
+
+<br>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-1">
+  <title>Marquesina azul</title>
+  <style>
+    .marquesina {
+      color: blue;
+      font-size: 80px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <marquee behavior="alternate" class="marquesina">
+   CARRERAS 
+  </marquee>
+
+</body>
+</html>
+
+<br>
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 80%;
+    }
+    th, td {
+      border: 5px solid #000;
+      padding: 25px;
+      text-align: center;
+    }
+    tr:nth-child(even) {
+      background-color: #d3d3d3; /* Gris */
+    }
+    tr:nth-child(odd) {
+      background-color: #cb4335; /* Red */
+    }
+  </style>
+</head>
+<body>
+
+<table>
+  <tr>
+    <th>carreras económicas administrativas universidad UTGZ</th>
+    
+  </tr>
+  <!-- 13 filas de datos (1 fila ya es la de encabezado) -->
+  <tr><td>El TSU en Contaduría:</td><td>La Puede valuar las operaciones económicas, estructurar la contabilidad, integrar estados financieros, gestionar trámites administrativos, integrar papeles de trabajo, formular informes financieros y diagnosticar la situación financiera.
+Tiene como objetivo formar profesionales capaces de analizar y gestionar la información financiera de las organizaciones. </td></tr>
+  <tr><td>El TSU en Operaciones Comerciales Internacionales:</td><td>Se enfoca en la clasificación arancelaria, el despacho aduanero y las operaciones comerciales internacionales.
+Puede desempeñarse como supervisor de despacho aduanero, consultor en comercio internacional, coordinador de operaciones, técnico en clasificación arancelaria y despacho aduanero, jefe de área de comercio internacional, entre otros.
+Busca formar profesionales con conocimientos en el manejo de las normas y procesos del comercio internacional, así como en la gestión de trámites aduaneros.  </td></tr>
+  
+  
+ 
+</table>
+
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Página Web Editable con Imágenes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f2f2f2;
+    }
+    .editable {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1, p {
+      margin: 10px 0;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      cursor: pointer;
+      margin: 10px 0;
+      border: 2px dashed #ccc;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="editable" contenteditable="true">
+    <h1>UNIVERSIDAD TECNOLOGICA DE XICOTEPEC JUAREZ</h1>
+    <p>La gestión de la Universidad Tecnológica inicia en el año 2001, cuando el Presidente Municipal de Xicotepec de Juárez (1999-2002) y el Diputado Federal (2000-2003), proponen de forma independiente al Gobierno del Estado representado por el Lic. Melquiades Morales Flores, Gobernador Constitucional del Estado de Puebla (1999-2005) la instalación de una universidad pública en el Municipio, existiendo en esos momentos soló una universidad privada.
+
+En base a las experiencias que se tenían de Universidades Tecnológicas ya instaladas en el Estado, es como el Gobierno del Estado de Puebla pone gran énfasis para crear la Universidad Tecnológica de Xicotepec de Juárez (UTXJ), la quinta en el Estado de Puebla, y propone en el año 2001 al gobierno federal, representada por la Coordinación General de Universidades Tecnológicas (CGUT), la creación una universidad tecnológica que impulse la formación de profesionistas en los diversos campos del conocimiento científico, tecnológico y humanístico, que le permita ampliar la cobertura de atención hacia los municipios aumentando el número de instituciones de educación superior tecnológica; la propuesta del Gobierno del Estado para la creación de la Universidad, se sustenta con una serie de estudios de factibilidad, que permiten identificar los diversos factores que avalan la pertinencia de la institución.
+
+Al sustentarse el proyecto de creación de la Universidad, se determina la participación de los gobiernos, estableciéndose el Convenio de Coordinación suscrito el 30 de abril de 2002 por la SEP federal y el gobierno estatal, documento que tiene por objeto establecer la coordinación para la creación, operación y apoyo financiero de la UTXJ; estableciéndose en su Cláusula Quinta, que ambos gobiernos convienen en aportar el 50% cada uno para el funcionamiento de la Universidad, reflejandose en su presupuesto anual de operación.
+
+En el convenio se establece la aportación inicial del Gobierno del Estado, que respaldado por el Gobierno Municipal (2002-2005), adquirió y donó a la Universidad Tecnológica de Xicotepec de Juárez el predio donde está instalada la Universidad, con una superficie de 20 hectáreas conforme a los lineamientos establecidos por el Comité Administrador del Programa Federal de Construcción de Escuelas (CAPFCE), terreno avalado por la SEP del Estado y la CGUT; así mismo, se proporcionaron los servicios indispensables como la pavimentación de vías de acceso, suministro de agua, energía eléctrica, alumbrado exterior, cerco perimetral, transportación urbana y demás servicios complementarios.
+
+Así mismo, el 28 de Agosto de 2009 se reforma y adicionan diversas disposiciones al Decreto que crea la Universidad Tecnológica de Xicotepec de Juárez, motivada por la impartición de estudios del Nivel 5A, correspondientes al grado de licenciatura, de acuerdo a la Clasificación Internacional Normalizada de la Educación (CINE) de la UNESCO; en este sentido, a partir del ciclo escolar 2009-2010, se inició a ofertar éste nivel académico como una continuidad de estudios para los egresados del nivel Técnico Superior Universitario o Profesional Asociado, con una formación académica basada en el Modelo metodológico basado en competencias profesionales definido por la CGUT.</p>
+    <p></p>
+    <img src="img07.jpg" alt="Imagen editable" onclick="cambiarImagen(this)">
+  </div>
+
+  <input type="file" id="fileInput" style="display: none;" accept="image/*">
+
+  <script>
+    function cambiarImagen(imgElement) {
+      const fileInput = document.getElementById('fileInput');
+      fileInput.onchange = function () {
+        const file = this.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            imgElement.src = e.target.result;
+          }
+          reader.readAsDataURL(file);
+        }
+      };
+      fileInput.click();
+    }
+  </script>
+</body>
+</html>
+
+
+<<html>
+ <head>
+...
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-1">
+  <title>Marquesina azul</title>
+  <style>
+    .marquesina {
+      color: blue;
+      font-size: 50px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <marquee behavior="alternate" class="marquesina">
+   UNIVERSIDAD TECNOLÓGICA DE XICOTEPEC JUAREZ
+  </marquee>
+
+</body>
+</html>
+
+
+<br><br>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Párrafo con borde verde</title>
+  <style>
+    .parrafo-verde {
+      border: 6px solid green;
+      padding: 65px;
+      width: 80%;
+      margin: 40px auto;
+      font-family: Arial, sans-serif;
+      background-color: #f9fff9;
+    }
+  </style>
+</head>
+<body>
+
+  <p class="parrafo-verde">
+    La Universidad Tecnológica de Xicotepec de Juárez se creó entre el año de 2002, con el fin de proporcionar a la población de la Sierra Norte de Puebla de otro centro educativo para la formación de los futuros profesionistas y principalmente de la juventud poblana.
+
+Sedes:
+
+- La UTXJ, o Universidad Tecnológica de Xicotepec de Juárez, tiene su sede principal en Av. Universidad Tecnológica No. 1000, Tierra Negra, Xicotepec de Juárez, Puebla, México, C.P. 73080. </center>
+
+<br><br>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-20">
+  <title>Tabla Azul y Gris</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 80%;
+    }
+    td {
+      border: 5px solid #000;
+      padding: 30px;
+      text-align: center;
+    }
+    /* Color azul para columnas impares */
+    td:nth-child(odd) {
+      background-color: lightred;
+    }
+    /* Color gris para columnas pares */
+    td:nth-child(even) {
+      background-color: lightgray;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <tr>
+      <td>correo</td>
+      <td>servicios.estudiantiles@utxicotepec.edu.mx. Universidad UTXJ</td>
+    </tr>
+    <tr>
+      <td>Lada</td>
+      <td>Av. Universidad Tecnológica No. 1000, Tierra Negra, Xicotepec de Juárez, C.P. 73080, Puebla.
+ 
+    </tr>
+    <tr>
+    </tr>
+  </table>
+</body>
+</html>
+  </p>
+
+</body>
+</html>
+
+
+<br><br>
+
+<td><img src="UTXJ.jpg" width="500" height="500"></td>
+
+<br>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-1">
+  <title>Marquesina azul</title>
+  <style>
+    .marquesina {
+      color: blue;
+      font-size: 80px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <marquee behavior="alternate" class="marquesina">
+   CARRERAS 
+  </marquee>
+
+</body>
+</html>
+
+<br>
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 80%;
+    }
+    th, td {
+      border: 5px solid #000;
+      padding: 25px;
+      text-align: center;
+    }
+    tr:nth-child(even) {
+      background-color: #d3d3d3; /* Gris */
+    }
+    tr:nth-child(odd) {
+      background-color: #cb4335; /* Rojo */
+    }
+  </style>
+</head>
+<body>
+
+<table>
+  <tr>
+    <th>carreras económicas administrativas universidad BUAP</th>
+    
+  </tr>
+  <!-- 13 filas de datos (1 fila ya es la de encabezado) -->
+  <tr><td>Licenciatura en Administración:</td><td>Esta carrera forma profesionales capaces de dirigir y gestionar empresas, desarrollar estrategias, realizar análisis financieros y desarrollar proyectos. </td></tr>
+  <tr><td>TSU en Capital Humano</td><td>Esta carrera prepara a profesionales en la gestión de personal, la selección y capacitación de empleados, y el desarrollo de la fuerza laboral.  </td></tr>
+  <tr><td>TSU en Emprendimiento, Formulación y Evaluación de Proyectos:</td><td>Esta carrera forma profesionales en la creación de nuevas empresas, la identificación de oportunidades de negocio, y la evaluación de proyectos empresariales. </td></tr>
+  <tr><td>Administración Pública y Gestión para el Desarrollo:</td><td>Formación en la administración de instituciones públicas y gestión de proyectos de desarrollo. </td></tr>
+  <tr><td>TSU en Operaciones Comerciales Internacionales:</td><td>Esta carrera prepara a profesionales en la gestión de las operaciones comerciales de las empresas en el mercado internacional, incluyendo la logística, la comercialización, y la gestión de aranceles.  .</td></tr>
+  
+ 
+</table>
+
+</body>
+</html>
